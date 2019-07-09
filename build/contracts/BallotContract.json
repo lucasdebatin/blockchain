@@ -1,0 +1,129 @@
+{
+  "contractName": "BallotContract",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Lucas/Documents/PUC/Trab Blockchain/contracts/ballotContract.sol\":\"BallotContract\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Lucas/Documents/PUC/Trab Blockchain/contracts/ballotContract.sol\":{\"keccak256\":\"0x955419e3959246e0c9d9bc9c4bd43351b0990edff39c501e30a41bc90c300e3a\",\"urls\":[\"bzzr://25c2560396cccfbdfb0bba7bb9eae37a78e855ab092cc2ff6c2b37f831d62199\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a72305820221368e5d99464a3d3372051a838252c16bb8373384b3db86f69fb432a7609e90029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a72305820221368e5d99464a3d3372051a838252c16bb8373384b3db86f69fb432a7609e90029",
+  "sourceMap": "34:2955:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:2955:3;;;;;;;",
+  "deployedSourceMap": "34:2955:3:-;;;;;",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\r\ncontract BallotContract {\r\n\r\n/*    uint private contador = 0;\r\n    uint public votosTotal = 0;\r\n    string public resultado = \"Resultado ainda nao definido\";\r\n    uint public eleitoresTotal = 0;\r\n    string public proposta;\r\n    address public presidenteEndereco;\r\n    string public presidenteNome;\r\n\r\n    struct voto{\r\n        address eleitorEndereco;\r\n        bool valor;\r\n    }\r\n    \r\n    struct eleitor{\r\n        string eleitorNome;\r\n        bool jaVotou;\r\n    }\r\n\r\n    enum State{\r\n        Inicio, Votando, Fim\r\n    }\r\n    State public contratoEstado;\r\n\r\n    mapping(uint => voto) private votos; //isso deveria estar criptografado\r\n    mapping(address => eleitor) public eleitores;\r\n    \r\n    constructor(string memory _presidente, string memory _proposta) public{\r\n        presidenteEndereco = msg.sender;\r\n        presidenteNome = _presidente;\r\n        proposta = _proposta;\r\n        contratoEstado = State.Inicio;\r\n    }\r\n\r\n    modifier requirePresidente(){\r\n        require(msg.sender == presidenteEndereco, \"Apenas o presidente pode fazer isso!\");\r\n        _;\r\n    }\r\n\r\n    modifier requireEstado(State estado){\r\n        require(contratoEstado == estado, \"Essa acao nao pode ser executada agora\");\r\n        _;\r\n    }\r\n\r\n    event eleitorAdicionado(address eleitor);\r\n    event eleicaoIniciada();\r\n    event eleicaoFinalizada(string resultado);\r\n    event votoComputado(address eleitor);\r\n\r\n    function adicionaEleitor(address _eleitorEndereco, string memory _eleitorNome) public requireEstado(State.Inicio) requirePresidente{\r\n        eleitor memory e;\r\n        e.eleitorNome = _eleitorNome;\r\n        e.jaVotou = false;\r\n        eleitores[_eleitorEndereco] = e;\r\n        eleitoresTotal++;\r\n        emit eleitorAdicionado(_eleitorEndereco);\r\n    }\r\n\r\n    function iniciaVotacao() public requireEstado(State.Inicio) requirePresidente{\r\n        contratoEstado = State.Votando;\r\n        emit eleicaoIniciada();\r\n    }\r\n\r\n    function computaVoto(bool _valor) public requireEstado(State.Votando) returns (bool jaVotou){\r\n\r\n        bool checaEleitor = false;\r\n\r\n        if(!eleitores[msg.sender].jaVotou && bytes(eleitores[msg.sender].eleitorNome).length != 0){\r\n\r\n            eleitores[msg.sender].jaVotou = true;\r\n\r\n\r\n            if(_valor){\r\n                contador++;\r\n            }\r\n            \r\n            votosTotal++;\r\n            checaEleitor = true;\r\n        }\r\n\r\n        emit votoComputado(msg.sender);\r\n        return checaEleitor;\r\n    }\r\n\r\n    function encerraVotacao() public requireEstado(State.Votando) requirePresidente{\r\n        contratoEstado = State.Fim;\r\n        uint resposta;\r\n        resposta = votosTotal - contador;\r\n        \r\n        if(resposta < contador){\r\n            resultado = \"Sim\";\r\n        }\r\n        else if(resposta == contador){\r\n            resultado = \"Empate\";\r\n        }\r\n        else{\r\n            resultado =  \"Nao\";\r\n        }\r\n        \r\n        emit eleicaoFinalizada(resultado);\r\n    } */\r\n    \r\n}",
+  "sourcePath": "C:/Users/Lucas/Documents/PUC/Trab Blockchain/contracts/ballotContract.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Lucas/Documents/PUC/Trab Blockchain/contracts/ballotContract.sol",
+    "exportedSymbols": {
+      "BallotContract": [
+        172
+      ]
+    },
+    "id": 173,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 171,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 172,
+        "linearizedBaseContracts": [
+          172
+        ],
+        "name": "BallotContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 173,
+        "src": "34:2955:3"
+      }
+    ],
+    "src": "0:2989:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Lucas/Documents/PUC/Trab Blockchain/contracts/ballotContract.sol",
+    "exportedSymbols": {
+      "BallotContract": [
+        172
+      ]
+    },
+    "id": 173,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 171,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 172,
+        "linearizedBaseContracts": [
+          172
+        ],
+        "name": "BallotContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 173,
+        "src": "34:2955:3"
+      }
+    ],
+    "src": "0:2989:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "1562297673284": {
+      "events": {},
+      "links": {},
+      "address": "0x8Ca629ef03Ba3B8619059AF525C70854c08d5AB2",
+      "transactionHash": "0xab406d0992cc22ba874dec19dd95b9a3efbe91da5d8587bfc97e5e265a477592"
+    },
+    "1562338394275": {
+      "events": {},
+      "links": {},
+      "address": "0xb310f8006Cb71a935DEed75917e817250a85494E",
+      "transactionHash": "0x075620135a20098137da18d9248598244be788b2fdd9c86f1d2dddb9e6b169fb"
+    },
+    "1562339121013": {
+      "events": {},
+      "links": {},
+      "address": "0xE911dcDBaBAE23FbB015352DD7D38A747D976237",
+      "transactionHash": "0x42c4de4166d57705f460de59b8c0ec70d9e177689b6a2898af408bc2e994d961"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-05T20:59:09.178Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
